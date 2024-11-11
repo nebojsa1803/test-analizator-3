@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
+import Providers from './providers'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -14,8 +16,8 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Jobify Dev',
-  description: 'Job application tracking system for job hunters',
+  title: 'Тест Анализатор',
+  description: 'Брзо и лако до анализа писмених провера',
 }
 
 export default function RootLayout({
@@ -24,12 +26,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang='en' suppressHydrationWarning>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <Providers> {children}</Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
