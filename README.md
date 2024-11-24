@@ -675,7 +675,7 @@ export function ModeToggle() {
 - render in add-job/page.tsx
 
 ```sh
-npx shadcn-ui@latest add form input
+npx shadcn@latest add form input
 ```
 
 ```tsx
@@ -1282,7 +1282,7 @@ export async function createJobAction(
 - install
 
 ```sh
-npx shadcn-ui@latest add toast
+npx shadcn@latest add toast
 
 ```
 

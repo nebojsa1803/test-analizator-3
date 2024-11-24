@@ -1,5 +1,6 @@
 'use client'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from '@/components/ui/toaster'
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
@@ -8,6 +9,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
         defaultTheme='light'
         disableTransitionOnChange
       >
+        <Toaster />
         {children}
       </ThemeProvider>
     </>

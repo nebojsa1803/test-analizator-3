@@ -21,7 +21,7 @@ export default function Home() {
             narwhal.
           </p>
           <Button asChild className='mt-4'>
-            <Link href='/add-job'>Get Started</Link>
+            <Link href='/new-analysis/general-data'>Почни</Link>
           </Button>
         </div>
         <Image src={LandingImg} alt='landing' className='hidden lg:block ' />

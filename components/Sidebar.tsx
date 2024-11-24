@@ -18,7 +18,11 @@ const Sidebar = () => {
             <Button
               asChild
               key={link.href}
-              variant={pathname === link.href ? 'default' : 'link'}
+              variant={
+                pathname.substring(0, 5) === link.href.substring(0, 5)
+                  ? 'default'
+                  : 'link'
+              }
             >
               <Link
                 href={link.href}

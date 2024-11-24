@@ -9,7 +9,7 @@ type NavLink = {
 
 const links: NavLink[] = [
   {
-    href: '/new-analysis',
+    href: '/new-analysis/general-data',
     label: 'Нова анализа',
     icon: <FilePlus2 />,
   },
