@@ -6,10 +6,12 @@ type FormInputProps = {
   type: string
   label?: string
   defaultValue?: string
+  min?: number
+  max?: number
 }
 
 const FormInput = (props: FormInputProps) => {
-  const { label, name, type, defaultValue } = props
+  const { label, name, type, defaultValue, min, max } = props
   return (
     <div className='mb-2'>
       <Label htmlFor={name}>{label || name}</Label>
@@ -19,6 +21,8 @@ const FormInput = (props: FormInputProps) => {
         type={type}
         defaultValue={defaultValue}
         className='h-10'
+        min={min}
+        max={max}
         required
       />
     </div>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { RadioGroup, RadioGroupItem } from '@radix-ui/react-radio-group'
 import { Label } from '@/components/ui/label'
 
-const FormRadioGroup = () => {
+const FormRadioGroup = ({ label }: { label: string }) => {
   const [selectedOption, setSelectedOption] = useState('option-one')
 
   const handleOptionClick = (option: string) => {
@@ -12,13 +12,14 @@ const FormRadioGroup = () => {
 
   return (
     <div className='flex flex-col justify-center items-center '>
-      <Label htmlFor='1.задатак' className='mb-2 text-base leading-loose'>
-        1. задатак
+      <Label htmlFor={label} className='mb-2 text-base leading-loose'>
+        {label}
       </Label>
       <RadioGroup
         defaultValue='option-one'
         className='flex gap-1'
-        name='1.zadatak'
+        name={label}
+        required
       >
         <RadioGroupItem
           value='basic'

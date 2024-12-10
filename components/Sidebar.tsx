@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 
 const Sidebar = () => {
   const pathname = usePathname()
-  console.log(pathname)
+
   return (
     <aside className='py-4 px-8 bg-muted h-full'>
       <Image src={Logo} alt='logo' className='mx-auto' priority />
