@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-//problems here!!!!!!!!!!!!!!!!!!!!
 export type PointsAndMarkType = {
-  classResault: string[][]
+  classResault: (string | number)[][]
 }
 
 const initialState: PointsAndMarkType = {

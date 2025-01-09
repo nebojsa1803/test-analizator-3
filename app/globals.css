@@ -16,6 +16,7 @@ body {
     @apply grid grid-cols-3 gap-4;
   }
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;

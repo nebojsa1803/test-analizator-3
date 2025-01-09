@@ -45,9 +45,9 @@ const GeneralDataForm = () => {
         <form action={formAction}>
           <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3 items-start '>
             <FormInput type='text' name='subject' label='Предмет' />
-            <FormSelect label='Врста теста' name='typeOfTest' />
+            <FormInput type='text' label='Врста теста' name='typeOfTest' />
+            <FormSelect name='typeOfMark' label='Врста оцене' />
             <FormInput type='text' name='date' label='Датум' />
-            <FormInput type='text' name='typeOfMark' label='Врста оцене' />
             <FormInput type='text' name='class' label='Разред' />
             <FormInput type='text' name='section' label='Одељење' />
             <FormInput
